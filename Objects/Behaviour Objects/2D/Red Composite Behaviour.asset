@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Red Composite Behaviour
   m_EditorClassIdentifier: 
   behaviours:
-  - {fileID: 11400000, guid: 6a341d773dd885d4c89de2666d2d1daa, type: 2}
-  - {fileID: 11400000, guid: 077e69717703ae74ca2db5d5a4eee5a1, type: 2}
-  - {fileID: 11400000, guid: f7115e1838ad2464c968d820f5d15710, type: 2}
+  - {fileID: 11400000, guid: dcd4661097e6fe54ca21b71ba75babd0, type: 2}
+  - {fileID: 11400000, guid: bb02e09d4915bed498a5bb2c52fbea74, type: 2}
+  - {fileID: 11400000, guid: 5582f7a007715e04c898db4047f7f00f, type: 2}
   - {fileID: 11400000, guid: 733c854d1b963de40986ed0a8efaf91c, type: 2}
-  - {fileID: 11400000, guid: edec85627b727a44eb29a2c04621e2f0, type: 2}
+  - {fileID: 11400000, guid: 077e69717703ae74ca2db5d5a4eee5a1, type: 2}
   - {fileID: 11400000, guid: 1d14bae6f1b095347aadd4998e339314, type: 2}
   weights:
   - 1

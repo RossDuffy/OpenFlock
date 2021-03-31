@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be0c91b6cdf431418fe9afb54554dee, type: 3}
   m_Name: Red Avoidance
   m_EditorClassIdentifier: 
-  filter: {fileID: 11400000, guid: 9dec85d280c98b644a14a8b0c8b2299c, type: 2}
+  filter: {fileID: 11400000, guid: b010cf77ecf3fa9428f1154ed29353cb, type: 2}
+  agentSmoothTime: 0.01
