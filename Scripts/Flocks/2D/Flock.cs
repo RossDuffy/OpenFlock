@@ -9,9 +9,12 @@ public class Flock : MonoBehaviour
     List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehaviour behaviour;
 
+    public bool randomSpawn = false;
+
     [Range(10, 500)]
     public int startingCount = 250;
-    const float AgentDensity = 0.08f;
+    [Range(0f, 0.2f)]
+    public float agentDensity = 0.08f;
 
     [Range(1f, 100f)]
     public float driveFactor = 10f;
@@ -34,17 +37,36 @@ public class Flock : MonoBehaviour
         squareNeighbourRadius = neighbourRadius * neighbourRadius;
         squareAvoidanceRadius = squareNeighbourRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
 
-        for (int i = 0; i < startingCount; i++)
+        if (randomSpawn)
         {
-            FlockAgent newAgent = Instantiate(
-                agentPrefab,
-                Random.insideUnitCircle * startingCount * AgentDensity,
-                Quaternion.Euler(Vector3.forward*Random.Range(0f, 360f)),
-                transform
-                );
-            newAgent.name = "Agent " + i;
-            newAgent.Initialize(this);
-            agents.Add(newAgent);
+            // Random spawn
+            for (int i = 0; i < startingCount; i++)
+            {
+                FlockAgent newAgent = Instantiate(
+                    agentPrefab,
+                    Random.insideUnitCircle * startingCount * agentDensity,
+                    Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
+                    transform
+                    );
+                newAgent.name = "Agent " + i;
+                newAgent.Initialize(this);
+                agents.Add(newAgent);
+            }
+        }
+        else
+        {
+            // Non random spawn
+            for (int i = 0; i < startingCount; i++)
+            {
+                FlockAgent newAgent = Instantiate(
+                    agentPrefab,
+                    transform.position,
+                    Quaternion.Euler(Vector3.forward),
+                    transform);
+                newAgent.name = "Agent " + i;
+                newAgent.Initialize(this);
+                agents.Add(newAgent);
+            }
         }
     }
 

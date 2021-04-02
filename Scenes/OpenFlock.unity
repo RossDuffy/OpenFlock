@@ -938,10 +938,12 @@ MonoBehaviour:
   agentPrefab: {fileID: 618175817567398633, guid: 2159ba43035788c4faccfdfb05245993,
     type: 3}
   behaviour: {fileID: 11400000, guid: 6e3de6ed329544d4f8357c54385529e6, type: 2}
-  startingCount: 100
+  randomSpawn: 0
+  startingCount: 50
+  agentDensity: 0.08
   driveFactor: 20.4
   maxSpeed: 2.5
-  neighbourRadius: 2.04
+  neighbourRadius: 4
   avoidanceRadiusMultiplier: 0.4
 --- !u!4 &1034128003
 Transform:
@@ -951,7 +953,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034128001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1089,7 +1091,9 @@ MonoBehaviour:
   agentPrefab: {fileID: 618175817567398633, guid: 5cb79cae59d0c1647b6bfbe57283c120,
     type: 3}
   behaviour: {fileID: 11400000, guid: c219c5ea6f261b4438efa2177ac7e1c5, type: 2}
+  randomSpawn: 0
   startingCount: 100
+  agentDensity: 0.08
   driveFactor: 10
   maxSpeed: 5
   neighbourRadius: 1.5
@@ -1240,10 +1244,12 @@ MonoBehaviour:
   agentPrefab: {fileID: 618175817567398633, guid: ecee97a67fab95f44a5e3b9bb52c20a5,
     type: 3}
   behaviour: {fileID: 11400000, guid: 465f40c3a92110342887ea31f7bbc8df, type: 2}
+  randomSpawn: 0
   startingCount: 10
+  agentDensity: 0.08
   driveFactor: 10
   maxSpeed: 2.5
-  neighbourRadius: 1.5
+  neighbourRadius: 5
   avoidanceRadiusMultiplier: 0.5
 --- !u!4 &1564166021
 Transform:
@@ -1476,7 +1482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1798022321
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1492,7 +1498,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798022320}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}

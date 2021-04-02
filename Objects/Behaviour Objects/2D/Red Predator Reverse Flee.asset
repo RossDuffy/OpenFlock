@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8872a1364856bea49811fa1c6538b05e, type: 3}
   m_Name: Red Predator Reverse Flee
   m_EditorClassIdentifier: 
-  filter: {fileID: 0}
-  chaseRadius: 5
+  filter: {fileID: 11400000, guid: 9dec85d280c98b644a14a8b0c8b2299c, type: 2}
+  chaseRadius: 15
   agentSmoothTime: 0.02

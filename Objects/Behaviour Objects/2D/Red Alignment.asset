@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Red Alignment
   m_EditorClassIdentifier: 
   filter: {fileID: 11400000, guid: b010cf77ecf3fa9428f1154ed29353cb, type: 2}
-  agentSmoothTime: 0.01
+  agentSmoothTime: 0
