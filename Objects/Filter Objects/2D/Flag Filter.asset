@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1024a81974a5a4b4985b7179e889f45d, type: 3}
-  m_Name: Stay In Radius Behaviour
+  m_Script: {fileID: 11500000, guid: da0e7745fee01da49b9bf17aa80e3f00, type: 3}
+  m_Name: Flag Filter
   m_EditorClassIdentifier: 
-  centre: {x: 0, y: 0}
-  radius: 15
-  agentSmoothTime: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 2048

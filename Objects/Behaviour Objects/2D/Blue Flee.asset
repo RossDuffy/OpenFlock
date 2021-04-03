@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b71012a18eec3f468cdf1df8c5ac5b5, type: 3}
   m_Name: Blue Flee
   m_EditorClassIdentifier: 
-  filter: {fileID: 11400000, guid: 9dec85d280c98b644a14a8b0c8b2299c, type: 2}
-  fleeRadius: 10
+  filter: {fileID: 11400000, guid: 6a3827e27367fae4b89bf513f08d7173, type: 2}
+  fleeRadius: 5
+  agentSmoothTime: 0.02

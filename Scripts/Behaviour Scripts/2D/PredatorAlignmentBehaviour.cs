@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behaviour/2D/Predator Alignment")]
+//[CreateAssetMenu(menuName = "Flock/Behaviour/2D/Predator Alignment")]
 public class PredatorAlignmentBehaviour : FilteredFlockBehaviour
 {
     [Range(1f, 30f)]

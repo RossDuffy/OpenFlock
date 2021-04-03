@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1024a81974a5a4b4985b7179e889f45d, type: 3}
-  m_Name: Stay In Radius Behaviour
+  m_Script: {fileID: 11500000, guid: 8424e4c5cad2cba4191a27ec99306ad7, type: 3}
+  m_Name: Blue Obstacle Avoidance Behaviour
   m_EditorClassIdentifier: 
-  centre: {x: 0, y: 0}
-  radius: 15
-  agentSmoothTime: 0
+  filter: {fileID: 11400000, guid: cde77e289c452ef4d93a9433fa3a08d5, type: 2}
+  agentSmoothTime: 0.02

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behaviour/2D/Predator Cohesion")]
+//[CreateAssetMenu(menuName = "Flock/Behaviour/2D/Predator Cohesion")]
 public class PredatorCohesionBehaviour : FilteredFlockBehaviour
 {
     [Range(1f, 30f)]
