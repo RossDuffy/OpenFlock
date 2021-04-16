@@ -1,8 +1,8 @@
 # OpenFlock_2
 
-Guide:
-  Installing:
-    To install the assets, pull them into your Unity project's Assets folder. The Open_Flock folder will contain behaviour and filter scripts, and example scenes and objects for both 2D and 3D flocks.
+Installing:
+
+To install the assets, pull them into your Unity project's Assets folder. The Open_Flock folder will contain behaviour and filter scripts, and example scenes and objects for both 2D and 3D flocks.
     
   Creating a flock:
     To begin creating flocks, here is a step-by-step on how to build a simple flock with the assets in this project:
