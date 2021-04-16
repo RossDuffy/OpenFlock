@@ -13,7 +13,7 @@ To begin creating flocks, here is a step-by-step on how to build a simple flock 
         - In the inspector, you should see a number of customisation options.
           The most important now are the empty Agent Prefab and Behaviour fields that need to be filled.
       
-      Step 2: Creating the Flock Agent prefab
+    Step 2: Creating the Flock Agent prefab
         - Create another empty game object. This is going to be used as each Agent in the flock.
         - In the inspector Add a 'Circle Collider 2D' to the Agent.
         - In the inspector Add the 'Flock Agent' script component.
@@ -22,7 +22,7 @@ To begin creating flocks, here is a step-by-step on how to build a simple flock 
           The Flock will create many of these when the simulation is run.
         - Lastly, drag the Agent prefab into the empty slot in the Flock inspector.
       
-      Step 3: Creating the Flock Behaviour
+    Step 3: Creating the Flock Behaviour
         - In the 'Behaviour Objects' folder, in the right-click menu -> Create -> Flock -> Behaviour -> <2D/3D> -> Composite.
           This behaviour combines the other basic behaviours into a single, coherent move.
         - Repeat the previous part with a Cohesion, Alignment, and Avoidance behaviours.
@@ -36,7 +36,7 @@ To begin creating flocks, here is a step-by-step on how to build a simple flock 
         - It is recommended to add a 'Stay in Radius' behaviour to the composite to keep the agents on screen.
         - Add the Composite behaviour into the Behaviour slot in the Flock.
       
-      Step 4: Running the simulation
+    Step 4: Running the simulation
         - Enable Random Spawn
         - Run the simulation and the flock should spawn the selected number of agents
           randomly around the centre point of the flock and begin flocking.
