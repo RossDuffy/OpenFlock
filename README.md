@@ -1,10 +1,46 @@
 # OpenFlock_2
+## About
+OpenFlock is a customisable, Open-source flock simulation assets for the Unity game engine's 2D and 3D environments.
 
-## Installing:
+### Features
+Simulation Scripts:
+- Flock: spawns a flock when the simulation is run, holds the agent prefab and behaviour object
+- Flock Agent: each flock individual, holds a Circle/Sphere Collider
+
+Behaviours:
+- Alignment
+- Cohesion
+- Steered Cohesion (a smoother version of cohesion)
+- Separation
+- Obstacle Avoidance
+- Go To Flag
+- Predator Chase
+- Prey Flee
+- Stay-in-Radius
+- Composite (for combining behaviours)
+
+Filters:
+- Different Flock
+- Same Flock
+- Physics Layer (used for obstacle avoidance and go to flag)
+
+Abstract classes:
+- Flock Behaviour
+- Filtered Flock Behaviour
+- Context Filter
+
+Custom Editors:
+- Flock Editor
+- Composite Behaviour Editor
+- Stay in Radius Behaviour Editor
+
+All of these features exist for both the 2D and 3D simulation. It is also possible for a user to change any of these scripts, extend the abstract classes, or create new features as they see fit.
+
+## Installing
 
 To install the assets, pull them into your Unity project's Assets folder. The Open_Flock folder will contain behaviour and filter scripts, and example scenes and objects for both 2D and 3D flocks.
     
-## Creating a flock:
+## Creating a flock
 To begin creating flocks, here is a step-by-step on how to build a simple flock with the assets in this project:
     
     Step 1: Creating the Flock in the scene
@@ -41,7 +77,7 @@ To begin creating flocks, here is a step-by-step on how to build a simple flock 
         - Run the simulation and the flock should spawn the selected number of agents
           randomly around the centre point of the flock and begin flocking.
   
-## Creating a custom behaviour & filters:
+## Creating a custom behaviour & filters
 If you desire to make a custom behaviour:
 
     - Create a new script in the 'Behaviour Scripts' folder.
@@ -56,3 +92,8 @@ If you desire to make a custom behaviour:
     - Next is to create the new behaviour object, add it to the composite behaviour, and give it a weight.
     
 Making a new filter type is similar to the above, there is an abstract Filter class to inherit from to make the process smoother.
+
+## Known Issues
+- _Error loading custom layout -> Select 'quit' and re-launch:_ Sometimes on loading the project with Unity Hub an error message will appear stating "Error Loading Custom Layout". This seems to be an issue with Unity itself but I found selecting the 'quit' option in that dialogue box, then re-launching Unity worked.
+- _Some Flock agents still fly through obstacles when they have the behaviour attached -> Increaese the behaviour's weight:_ This unfortunately won't 100% fix the problem, but it should help. The problem is with all the signals from other behaviours being received, sometimes the urge for the agent to cohere or align with its flockmates overcomes the signal from the obstacle avoidance behaviour in the current implementation.
+- _3D FLock orbits consrtaint radius -> Increase size of constraint radius:_ This problem is believed to be caused by the 3D agents having a 360 degree field of view. The agents bump into the constraint barrier, then continue to align with their flockmates behind them, causing them to repeatedly hit the constraint barrier.
