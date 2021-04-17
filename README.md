@@ -1,10 +1,10 @@
 # OpenFlock_2
 
-Installing:
+## Installing:
 
 To install the assets, pull them into your Unity project's Assets folder. The Open_Flock folder will contain behaviour and filter scripts, and example scenes and objects for both 2D and 3D flocks.
     
-Creating a flock:
+## Creating a flock:
 To begin creating flocks, here is a step-by-step on how to build a simple flock with the assets in this project:
     
     Step 1: Creating the Flock in the scene
@@ -41,7 +41,7 @@ To begin creating flocks, here is a step-by-step on how to build a simple flock 
         - Run the simulation and the flock should spawn the selected number of agents
           randomly around the centre point of the flock and begin flocking.
   
-Creating a custom behaviour & filters:
+## Creating a custom behaviour & filters:
 If you desire to make a custom behaviour:
 
     - Create a new script in the 'Behaviour Scripts' folder.
