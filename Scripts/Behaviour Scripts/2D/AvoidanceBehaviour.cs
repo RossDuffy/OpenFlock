@@ -5,9 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behaviour/2D/Avoidance")]
 public class AvoidanceBehaviour : FilteredFlockBehaviour
 {
-
     Vector2 currentVelocity;
-    public float agentSmoothTime = 0.02f;
+    public float agentSmoothTime = 0f;
 
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {

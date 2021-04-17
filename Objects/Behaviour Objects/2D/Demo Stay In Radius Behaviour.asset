@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be0c91b6cdf431418fe9afb54554dee, type: 3}
-  m_Name: Avoid Obsticles Behaviour
+  m_Script: {fileID: 11500000, guid: 1024a81974a5a4b4985b7179e889f45d, type: 3}
+  m_Name: Demo Stay In Radius Behaviour
   m_EditorClassIdentifier: 
-  filter: {fileID: 11400000, guid: cde77e289c452ef4d93a9433fa3a08d5, type: 2}
+  centre: {x: 0, y: 0}
+  radius: 17
   agentSmoothTime: 0

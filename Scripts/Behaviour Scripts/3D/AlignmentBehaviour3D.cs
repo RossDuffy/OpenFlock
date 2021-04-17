@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behaviour/3D/Alignment 3D")]
 public class AlignmentBehaviour3D : FilteredFlockBehaviour3D
 {
+    Vector3 currentVelocity;
+    public float agentSmoothTime = 0f;
+
     public override Vector3 CalculateMove(FlockAgent3D agent, List<Transform> context, Flock3D flock)
     {
         // if no neighbour do same
@@ -22,6 +25,7 @@ public class AlignmentBehaviour3D : FilteredFlockBehaviour3D
         }
         alignmentMove /= context.Count;
 
+        alignmentMove = Vector3.SmoothDamp(agent.transform.up, alignmentMove, ref currentVelocity, agentSmoothTime);
         return alignmentMove;
     }
 }

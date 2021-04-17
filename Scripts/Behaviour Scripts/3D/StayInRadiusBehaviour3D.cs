@@ -9,6 +9,9 @@ public class StayInRadiusBehaviour3D : FlockBehaviour3D
     public Vector3 centre;
     public float radius = 15f;
 
+    Vector3 currentVelocity;
+    public float agentSmoothTime = 0f;
+
     public override Vector3 CalculateMove(FlockAgent3D agent, List<Transform> context, Flock3D flock)
     {
         Vector3 centreOffset = centre - (Vector3)agent.transform.position;
@@ -18,6 +21,8 @@ public class StayInRadiusBehaviour3D : FlockBehaviour3D
             return Vector3.zero;
         }
 
-        return centreOffset * t * t;
+        centreOffset = centreOffset * t * t;
+        centreOffset = Vector3.SmoothDamp(agent.transform.up, centreOffset, ref currentVelocity, agentSmoothTime);
+        return centreOffset;
     }
 }

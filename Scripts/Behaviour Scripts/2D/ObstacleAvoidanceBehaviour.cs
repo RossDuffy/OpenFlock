@@ -5,9 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behaviour/2D/Obstacle Avoidance")]
 public class ObstacleAvoidanceBehaviour : FilteredFlockBehaviour
 {
+    [Range(1f, 15f)]
+    public float obstacleAvoidRadius = 5.0f;
 
     Vector2 currentVelocity;
-    public float agentSmoothTime = 0.02f;
+    public float agentSmoothTime = 0f;
 
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
@@ -23,7 +25,8 @@ public class ObstacleAvoidanceBehaviour : FilteredFlockBehaviour
         List<Transform> filteredContext = (filter == null) ? context : filter.Filter(agent, context);
         foreach (Transform item in filteredContext)
         {
-            if (agent.AgentCollider.IsTouching(item.GetComponent<Collider2D>()))
+            Collider2D obstacleCollider = item.GetComponent<Collider2D>();
+            if (Vector2.SqrMagnitude(obstacleCollider.ClosestPoint(agent.transform.position) - (Vector2)agent.transform.position) < obstacleAvoidRadius)
             {
                 nAvoid++;
                 avoidanceMove += (Vector2)(agent.transform.position - item.position);

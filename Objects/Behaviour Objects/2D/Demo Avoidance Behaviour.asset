@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0be0c91b6cdf431418fe9afb54554dee, type: 3}
-  m_Name: Avoid Obsticles Behaviour
+  m_Name: Demo Avoidance Behaviour
   m_EditorClassIdentifier: 
-  filter: {fileID: 11400000, guid: cde77e289c452ef4d93a9433fa3a08d5, type: 2}
+  filter: {fileID: 11400000, guid: b010cf77ecf3fa9428f1154ed29353cb, type: 2}
   agentSmoothTime: 0

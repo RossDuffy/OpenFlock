@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Blue Obstacle Avoidance Behaviour
   m_EditorClassIdentifier: 
   filter: {fileID: 11400000, guid: cde77e289c452ef4d93a9433fa3a08d5, type: 2}
+  obstacleAvoidRadius: 2
   agentSmoothTime: 0.02

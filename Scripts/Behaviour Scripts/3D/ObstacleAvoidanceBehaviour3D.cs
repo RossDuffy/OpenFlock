@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behaviour/3D/Avoidance 3D")]
-public class AvoidanceBehaviour3D : FilteredFlockBehaviour3D
+[CreateAssetMenu(menuName = "Flock/Behaviour/3D/Obstacle Avoidance 3D")]
+public class ObstacleAvoidanceBehaviour3D : FilteredFlockBehaviour3D
 {
+    [Range(1f, 15f)]
+    public float obstacleAvoidRadius = 5.0f;
+
     Vector3 currentVelocity;
     public float agentSmoothTime = 0f;
 
@@ -22,7 +25,8 @@ public class AvoidanceBehaviour3D : FilteredFlockBehaviour3D
         List<Transform> filteredContext = (filter == null) ? context : filter.Filter(agent, context);
         foreach (Transform item in filteredContext)
         {
-            if (Vector3.SqrMagnitude(item.position - agent.transform.position) < flock.SquareAvoidanceRadius)
+            SphereCollider obstacleCollider = item.GetComponent<SphereCollider>();
+            if (Vector3.SqrMagnitude(obstacleCollider.ClosestPoint(agent.transform.position) - (Vector3)agent.transform.position) < obstacleAvoidRadius)
             {
                 nAvoid++;
                 avoidanceMove += (Vector3)(agent.transform.position - item.position);
