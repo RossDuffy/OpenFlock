@@ -1,4 +1,4 @@
-# OpenFlock_2
+# OpenFlock
 ## About
 OpenFlock is a customisable, Open-source flock simulation assets for the Unity game engine's 2D and 3D environments.
 
