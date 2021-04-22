@@ -1345,7 +1345,7 @@ MonoBehaviour:
   behaviour: {fileID: 11400000, guid: 65480a41c92aedf43b8f5c09af5939c7, type: 2}
   randomSpawn: 1
   startingCount: 250
-  agentDensity: 0.08
+  agentDensity: 0
   driveFactor: 10
   maxSpeed: 5
   neighbourRadius: 1.5
